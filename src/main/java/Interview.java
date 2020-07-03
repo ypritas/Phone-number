@@ -1,14 +1,22 @@
+import static java.lang.Math.min;
+
 public class Interview {
 
     public static final int ASCII_CORRECTION = 64;
     public static final int ASCII_Z = 90 - ASCII_CORRECTION;
     public static final int ASCII_O = 79 - ASCII_CORRECTION;
+    public static final int ASCII_F = 70 - ASCII_CORRECTION;
     public static final int ASCII_R = 82 - ASCII_CORRECTION;
     public static final int ASCII_E = 69 - ASCII_CORRECTION;
     public static final int ASCII_N = 78 - ASCII_CORRECTION;
     public static final int ASCII_T = 84 - ASCII_CORRECTION;
+    public static final int ASCII_S = 83 - ASCII_CORRECTION;
     public static final int ASCII_W = 87 - ASCII_CORRECTION;
     public static final int ASCII_H = 72 - ASCII_CORRECTION;
+    public static final int ASCII_U = 85 - ASCII_CORRECTION;
+    public static final int ASCII_I = 73 - ASCII_CORRECTION;
+    public static final int ASCII_V = 86 - ASCII_CORRECTION;
+    public static final int ASCII_X = 88 - ASCII_CORRECTION;
 
     public static void main(String[] args) {
        String example = "OZONETOWERTHREETWO";
@@ -25,7 +33,7 @@ public class Interview {
         array[ASCII_R]-=zero;
         array[ASCII_O]-=zero;
 
-       int conditionOne = Math.min(Math.min(array[ASCII_O], array[ASCII_N]),array[ASCII_E]);
+       int conditionOne = min(min(array[ASCII_O], array[ASCII_N]),array[ASCII_E]);
         for (int j=0; j<conditionOne; j++) {
             System.out.print("1");
         }
@@ -33,7 +41,7 @@ public class Interview {
         array[ASCII_N]-=conditionOne;
         array[ASCII_E]-=conditionOne;
 
-        int conditionTwo = Math.min(Math.min(array[ASCII_T], array[ASCII_W]),array[ASCII_O]);
+        int conditionTwo = min(min(array[ASCII_T], array[ASCII_W]),array[ASCII_O]);
             for (int j=0; j<conditionTwo; j++) {
             System.out.print("2");
         }
@@ -41,7 +49,7 @@ public class Interview {
         array[ASCII_W]-=conditionTwo;
         array[ASCII_O]-=conditionTwo;
 
-        int conditionThree = Math.min(Math.min(Math.min(array[ASCII_T], array[ASCII_H]),array[ASCII_R]),array[ASCII_E]/2);
+        int conditionThree = min(min(min(array[ASCII_T], array[ASCII_H]),array[ASCII_R]),array[ASCII_E]/2);
         for (int j=0; j<conditionThree; j++) {
             System.out.print("3");
         }
@@ -50,7 +58,7 @@ public class Interview {
         array[ASCII_R]-=conditionThree;
         array[ASCII_E]-=conditionThree*2;
 
-        int conditionFour = Math.min(Math.min(Math.min(array[ASCII_F], array[ASCII_O]),array[ASCII_U]),array[ASCII_R]);
+        int conditionFour = min(min(min(array[ASCII_F], array[ASCII_O]),array[ASCII_U]),array[ASCII_R]);
         for (int j=0; j<conditionFour; j++) {
             System.out.print("4");
         }
@@ -59,7 +67,7 @@ public class Interview {
         array[ASCII_U]-=conditionFour;
         array[ASCII_R]-=conditionFour;
 
-        int conditionFive = Math.min(Math.min(Math.min(array[ASCII_F], array[ASCII_I]),array[ASCII_V]),array[ASCII_E]);
+        int conditionFive = min(min(min(array[ASCII_F], array[ASCII_I]),array[ASCII_V]),array[ASCII_E]);
         for (int j=0; j<conditionFive; j++) {
             System.out.print("5");
         }
@@ -68,7 +76,7 @@ public class Interview {
         array[ASCII_V]-=conditionFive;
         array[ASCII_E]-=conditionFive;
 
-        int conditionSix = Math.min(Math.min(Math.min(array[ASCII_S], array[ASCII_I]),array[ASCII_X]));
+        int conditionSix = min(min(array[ASCII_S], array[ASCII_I]),array[ASCII_X]);
         for (int j=0; j<conditionSix; j++) {
             System.out.print("6");
         }
@@ -76,7 +84,7 @@ public class Interview {
         array[ASCII_I]-=conditionSix;
         array[ASCII_X]-=conditionSix;
 
-        int conditionSeven = Math.min(Math.min(Math.min(array[ASCII_S], array[ASCII_N]),array[ASCII_V]),array[ASCII_E]/2);
+        int conditionSeven = min(min(min(array[ASCII_S], array[ASCII_N]),array[ASCII_V]),array[ASCII_E]/2);
         for (int j=0; j<conditionSeven; j++) {
             System.out.print("7");
         }
